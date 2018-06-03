@@ -45,18 +45,12 @@ class Dianping(CrawlSpider):
     #         yield SplashRequest(url, self.parse, args={'wait': 0.5})
 
     def parse(self, response):
-        print(response.text)
-
         res_url = response.url
-        res_body = response.body.decode("utf-8")
-        res_header = response.headers
-        print(res_header)
         print(res_url)
-        print(res_body)
 
         selector = Selector(response=response)
-        content = selector.xpath('//*[@id="rev_421498185"]/div/div[1]/p/text()[2]')
-        print(content.extract())
+        content = selector.xpath('//*[@class="desc"]/text()').extract()
+        print(content)
 
         # data = {
         #     'name': '我就再试i 一试',

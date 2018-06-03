@@ -30,7 +30,8 @@ DEFAULT_REQUEST_HEADERS = {
     'accept': 'image/webp,*/*;q=0.8',
     'accept-language': 'zh-CN,zh;q=0.8',
     'referer': 'https://seekingalpha.com/',
-    'user-agent': 'Mozilla/5.0 (Windows NT 6.3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.63 Safari/537.36',
+    'user-agent': 'Mozilla/5.0 (Windows NT 6.3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.63 '
+                  'Safari/537.36',
 }
 
 DOWNLOAD_DELAY = 0.1
@@ -122,7 +123,7 @@ DOWNLOAD_DELAY = 0.1
 # 在settings.py中引用pipelines.py 从而pipelines生效
 # ITEM_PIPELINES = ['myCrawler.pipelines.MycrawlerPipeline']
 
-# MONGODB_HOST = '123.206.70.190'
-# MONGODB_PORT = 27017
-# MONGODB_DBNAME = 'dianpingtest'
-# MONGODB_DOCNAME = 'menu_test'
+MONGODB_HOST = '123.206.70.190'
+MONGODB_PORT = 27017
+MONGODB_DBNAME = 'dinning_menu'
+MONGODB_DOCNAME = 'menu'

@@ -3,7 +3,7 @@ from scrapy.spiders import CrawlSpider
 from scrapy_splash import SplashRequest
 from scrapy.selector import Selector
 from myCrawler.utils.mongodb_utils import *
-
+import datetime
 
 # AJAX网页特点
 # 1. 页面加载快速
@@ -14,6 +14,9 @@ from myCrawler.utils.mongodb_utils import *
 # 1. 审查元素列出js文件
 # 2. 寻找可疑文件
 # 3. 解析js文件内容
+
+nowTime = datetime.datetime.now().strftime('%Y%m%d%H%M%S')  # 现在时刻
+
 
 class Dianping(CrawlSpider):
     name = "dianpingTest"
@@ -37,7 +40,8 @@ class Dianping(CrawlSpider):
     ]
     start_urls = [
         # "https://www.dianping.com/search/keyword/3/0_"
-        'http://www.dianping.com/shop/97567356'
+        # 'http://www.dianping.com/shop/97567356'
+        'http://www.dianping.com/shop/97567356/review_all/p2'
     ]
 
     # def start_requests(self):
@@ -46,19 +50,22 @@ class Dianping(CrawlSpider):
 
     def parse(self, response):
         res_url = response.url
-        print(res_url)
+        with open('../crawler_files/dianping_shop'+nowTime+'.html', 'w') as f:
+            f.write(res_url)
+            f.write('\n\n')
+            f.write(response.text)
 
-        selector = Selector(response=response)
-        content = selector.xpath('//*[@class="desc"]/text()').extract()
-        print(content)
-
-        # data = {
-        #     'name': '我就再试i 一试',
-        #     'age': 3435,
-        #     'skills': ['吃饭', '睡觉', '哗啦啦'],
-        #     'caca': 'kaka123'
-        # }
+        # print(response.text)
         #
-        # insert_data(data=data)
-        #
-        # print(data)
+        # selector = Selector(response=response)
+        # web_content = selector.xpath('//*[@class="comment-item"]')
+        # for each in web_content:
+        #     data = {
+        #         'user': str(each.xpath('./p/a/text()')),
+        #         'price': str(each.xpath('./div/p/span/text()')),
+        #         'comments': str(each.xpath('.//*[@class="desc"]/text()')),
+        #         'comments_detail': str(each.xpath('.//*[@class="desc J-desc"]/text()')),
+        #         'time': str(each.xpath('.//*[@class="time"]/text()'))
+        #     }
+        #     insert_data(data=data)
+        #     print(data)

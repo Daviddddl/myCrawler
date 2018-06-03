@@ -22,4 +22,4 @@ def remove_data(data):
 #
 # # post_info.remove({'name': '我就试试'})
 
-print("mongodb数据库操作完成！")
+# print("mongodb数据库操作完成！")

@@ -16,7 +16,7 @@ NEWSPIDER_MODULE = 'myCrawler.spiders'
 
 # 添加splash服务器地址
 # docker run -p 8050:8050 scrapinghub/splash
-SPLASH_URL = 'http://localhost:8050'
+# SPLASH_URL = 'http://localhost:8050'
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 # USER_AGENT = 'myCrawler (+http://www.yourdomain.com)'
@@ -26,6 +26,14 @@ ROBOTSTXT_OBEY = False
 
 FEED_EXPORT_ENCODING = 'utf-8'
 
+DEFAULT_REQUEST_HEADERS = {
+    'accept': 'image/webp,*/*;q=0.8',
+    'accept-language': 'zh-CN,zh;q=0.8',
+    'referer': 'https://seekingalpha.com/',
+    'user-agent': 'Mozilla/5.0 (Windows NT 6.3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.63 Safari/537.36',
+}
+
+DOWNLOAD_DELAY = 0.1
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 # CONCURRENT_REQUESTS = 32
 
@@ -58,22 +66,22 @@ FEED_EXPORT_ENCODING = 'utf-8'
 # Enable or disable downloader middlewares
 # See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 # 将splash middleware添加到DOWNLOADER_MIDDLEWARE中
-DOWNLOADER_MIDDLEWARES = {
-    # 'myCrawler.middlewares.MycrawlerDownloaderMiddleware': 543,
-    'scrapy.contrib.downloadermiddleware.seragent.UserAgentMiddleware': None,   # 禁用默认middleware
-    'myCrawler.middlewares.MyAgent': 543,
-    'scrapy_splash.SplashCookiesMiddleware': 723,
-    'scrapy_splash.SplashMiddleware': 725,
-    'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware': 810,
-}
+# DOWNLOADER_MIDDLEWARES = {
+#     # 'myCrawler.middlewares.MycrawlerDownloaderMiddleware': 543,
+#     'scrapy.contrib.downloadermiddleware.seragent.UserAgentMiddleware': None,   # 禁用默认middleware
+#     'myCrawler.middlewares.MyAgent': 543,
+#     'scrapy_splash.SplashCookiesMiddleware': 723,
+#     'scrapy_splash.SplashMiddleware': 725,
+#     'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware': 810,
+# }
 
 # Enable SplashDeduplicateArgsMiddleware
-SPIDER_MIDDLEWARES = {
-    'scrapy_splash.SplashDeduplicateArgsMiddleware': 100,
-}
+# SPIDER_MIDDLEWARES = {
+#     'scrapy_splash.SplashDeduplicateArgsMiddleware': 100,
+# }
 
 # Set a custom DUPEFILTER_CLASS
-DUPEFILTER_CLASS = 'scrapy_splash.SplashAwareDupeFilter'
+# DUPEFILTER_CLASS = 'scrapy_splash.SplashAwareDupeFilter'
 
 # Enable or disable extensions
 # See https://doc.scrapy.org/en/latest/topics/extensions.html
@@ -108,13 +116,13 @@ DUPEFILTER_CLASS = 'scrapy_splash.SplashAwareDupeFilter'
 # HTTPCACHE_DIR = 'httpcache'
 # HTTPCACHE_IGNORE_HTTP_CODES = []
 # HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
-HTTPCACHE_STORAGE = 'scrapy_splash.SplashAwareFSCacheStorage'
+# HTTPCACHE_STORAGE = 'scrapy_splash.SplashAwareFSCacheStorage'
 
 # 在settings.py中配置MongoDB的IP地址、端口号、数据记录名称，可以实现方便的更换MongoDB的数据库信息
 # 在settings.py中引用pipelines.py 从而pipelines生效
 # ITEM_PIPELINES = ['myCrawler.pipelines.MycrawlerPipeline']
 
-MONGODB_HOST = '123.206.70.190'
-MONGODB_PORT = 27017
-MONGODB_DBNAME = 'dianpingtest'
-MONGODB_DOCNAME = 'menu_test'
+# MONGODB_HOST = '123.206.70.190'
+# MONGODB_PORT = 27017
+# MONGODB_DBNAME = 'dianpingtest'
+# MONGODB_DOCNAME = 'menu_test'

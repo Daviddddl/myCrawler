@@ -17,12 +17,14 @@ class Dianping(CrawlSpider):
     name = "dianpingTest"
     start_urls = [
         "https://www.dianping.com/search/keyword/3/0_杭州酒家"
-        # "http://movie.douban.com/top250"
+
     ]
 
-    def start_requests(self):
-        for url in self.start_urls:
-            yield SplashRequest(url, self.parse, args={'wait': 0.5})
+    # def start_requests(self):
+    #     for url in self.start_urls:
+    #         yield SplashRequest(url, self.parse, args={'wait': 0.5})
+
+
 
     def parse(self, response):
         print(response.text)

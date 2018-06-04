@@ -9,7 +9,7 @@ from myCrawler.settings import MONGODB_PORT
 
 
 url = 'http://www.dianping.com/shop/'+shop_url_id+'/review_all/p'
-for i in range(1, 26):
+for i in range(1, 10):
     print('当前解析到: ' + str(i))
     html = open('../crawler_files/'+shop_icon+'_comments_p'+str(i)+'.html', 'r')
     selector = etree.HTML(html.read())

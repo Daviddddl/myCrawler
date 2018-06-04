@@ -2,7 +2,7 @@ import pymongo
 
 connection = pymongo.MongoClient(host='123.206.70.190', port=27017)
 tdb = connection.dinning_menu
-post_info = tdb.comments
+post_info = tdb.menu
 
 
 def insert_data(data):

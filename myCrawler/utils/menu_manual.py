@@ -2,13 +2,13 @@ from lxml import etree
 from myCrawler.utils.mongodb_utils import *
 
 
-shop_name = 'Au79 Brunch(龙湖滨江天街店)'
-url = 'http://www.dianping.com/shop/97567356/dishlist/p'
+shop_name = '杭州酒家(延安路店)'
+url = 'http://www.dianping.com/shop/11549988/dishlist/p'
 shop_id = '01'
 
-for i in range(1, 10):
+for i in range(1, 28):
     print('当前解析到: ' + str(i))
-    html = open('../crawler_files/au79_dishlist_p'+str(i)+'.html', 'r')
+    html = open('../crawler_files/hzjj_dishlist_p'+str(i)+'.html', 'r')
     selector = etree.HTML(html.read())
     dishes_list = selector.xpath('//*[@class="list-desc"]/ul/a')
     for each_dish in dishes_list:
@@ -25,4 +25,5 @@ for i in range(1, 10):
             'dish_recommend': dish_recommend,
             'price': price
         }
+        # print(data)
         insert_data(data=data)

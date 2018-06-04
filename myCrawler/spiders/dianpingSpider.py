@@ -49,13 +49,13 @@ class Dianping(CrawlSpider):
     #         yield SplashRequest(url, self.parse, args={'wait': 0.5})
 
     def parse(self, response):
-        res_url = response.url
-        with open('../crawler_files/dianping_shop'+nowTime+'.html', 'w') as f:
-            f.write(res_url)
-            f.write('\n\n')
-            f.write(response.text)
+        # res_url = response.url
+        # with open('../crawler_files/dianping_shop'+nowTime+'.html', 'w') as f:
+        #     f.write(res_url)
+        #     f.write('\n\n')
+        #     f.write(response.text)
 
-        # print(response.text)
+        print(response.text)
         #
         # selector = Selector(response=response)
         # web_content = selector.xpath('//*[@class="comment-item"]')

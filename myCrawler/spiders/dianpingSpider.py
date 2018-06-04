@@ -1,6 +1,6 @@
 import scrapy
 from scrapy.spiders import CrawlSpider
-from scrapy_splash import SplashRequest
+# from scrapy_splash import SplashRequest
 from scrapy.selector import Selector
 from myCrawler.utils.mongodb_utils import *
 import datetime

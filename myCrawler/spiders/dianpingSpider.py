@@ -39,9 +39,10 @@ class Dianping(CrawlSpider):
         '胖哥俩肉蟹煲'
     ]
     start_urls = [
+        'http://210.46.97.225/gov_corpus/corpus_look1.html'
         # "https://www.dianping.com/search/keyword/3/0_"
         # 'http://www.dianping.com/shop/97567356'
-        'http://www.dianping.com/shop/97567356/review_all/p2'
+        # 'http://www.dianping.com/shop/97567356/review_all/p2'
     ]
 
     # def start_requests(self):

@@ -1,14 +1,17 @@
 from lxml import etree
-from myCrawler.utils.mongodb_utils import *
+from myCrawler.utils.shop_manual import shop_name
+from myCrawler.utils.shop_manual import shop_id
+from myCrawler.utils.shop_manual import shop_url_id
+from myCrawler.utils.shop_manual import shop_icon
+import pymongo
+from myCrawler.settings import MONGODB_HOST
+from myCrawler.settings import MONGODB_PORT
 
 
-shop_name = '杭州酒家(延安路店)'
-url = 'http://www.dianping.com/shop/11549988/dishlist/p'
-shop_id = '01'
-
+url = 'http://www.dianping.com/shop/'+shop_url_id+'/dishlist/p'
 for i in range(1, 28):
     print('当前解析到: ' + str(i))
-    html = open('../crawler_files/hzjj_dishlist_p'+str(i)+'.html', 'r')
+    html = open('../crawler_files/'+shop_icon+'_dishlist_p'+str(i)+'.html', 'r')
     selector = etree.HTML(html.read())
     dishes_list = selector.xpath('//*[@class="list-desc"]/ul/a')
     for each_dish in dishes_list:
@@ -26,4 +29,8 @@ for i in range(1, 28):
             'price': price
         }
         # print(data)
-        insert_data(data=data)
+
+        connection = pymongo.MongoClient(host=MONGODB_HOST, port=MONGODB_PORT)
+        tdb = connection.dinning_menu
+        post_info = tdb.menu
+        post_info.insert(data)

@@ -9,12 +9,14 @@ from myCrawler.utils.mongodb_utils import *
 # detail = '人均：131元 口味：8.5 环境：9.2 服务：9.1'
 # shop_url = 'http://www.dianping.com/shop/97567356'
 
-# shop_id = '02'
-# shop_name = '杭州酒家(延安路店)'
-# address = '延安路205号1-3楼(延安路邮电路口)'
-# phone = '0571-87087123'
-# detail = '人均:88元 口味:8.5 环境:8.5 服务:8.2'
-# shop_url = 'http://www.dianping.com/shop/11549988'
+shop_id = '02'
+shop_name = '杭州酒家(延安路店)'
+address = '延安路205号1-3楼(延安路邮电路口)'
+phone = '0571-87087123'
+detail = '人均:88元 口味:8.5 环境:8.5 服务:8.2'
+shop_url = 'http://www.dianping.com/shop/11549988'
+shop_url_id = '11549988'
+shop_icon = 'hzjj'
 
 # shop_id = '03'
 # shop_name = '绿茶餐厅(西湖银泰店)'
@@ -127,12 +129,12 @@ from myCrawler.utils.mongodb_utils import *
 # detail = '人均：67元 口味：8.6 环境：8.5 服务：8.3'
 # shop_url = 'http://www.dianping.com/shop/18607345'
 
-shop_id = '18'
-shop_name = ''
-address = ''
-phone = ''
-detail = ''
-shop_url = ''
+# shop_id = '18'
+# shop_name = ''
+# address = ''
+# phone = ''
+# detail = ''
+# shop_url = ''
 
 data = {
     'shop_id': shop_id,

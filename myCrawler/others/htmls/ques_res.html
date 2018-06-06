@@ -1,0 +1,215 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no, email=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title> åå°æ»¨å·¥ä¸å¤§å­¦âåº¦ç§é«è </title>
+    <script src="http://s1.bdstatic.com/r/www/cache/ecom/esl/1-8-2/esl.js"></script>
+    
+    <link href="/saiya/gaokao/1468910398/asset/css/questionList.css" rel='stylesheet' type='text/css'>
+    <link href="/saiya/gaokao/1468910398/dep/vux/0.0.15/vux.css" rel='stylesheet' type='text/css'>
+    <script src="http://static1.searchbox.baidu.com/static/searchbox/openjs/aio.js?v=201502"></script>
+
+    <link href="/saiya/gaokao/1468910398/asset/css/download.css" rel='stylesheet' type='text/css'>
+    <script>
+    require.config({
+        'baseUrl': '/saiya/gaokao/1468910398/asset',
+        'paths': {},
+        'packages': [
+            {
+                'name': 'etpl',
+                'location': '../dep/etpl/3.0.1/asset',
+                'main': 'main'
+            },
+            {
+                'name': 'fastclick',
+                'location': '../dep/fastclick/1.0.6/asset',
+                'main': 'fastclick'
+            },
+            {
+                'name': 'saber-ajax',
+                'location': '../dep/saber-ajax/2.1.0/asset',
+                'main': 'main'
+            },
+            {
+                'name': 'saber-dom',
+                'location': '../dep/saber-dom/1.0.0/asset',
+                'main': 'main'
+            },
+            {
+                'name': 'saber-emitter',
+                'location': '../dep/saber-emitter/2.0.0/asset',
+                'main': 'emitter'
+            },
+            {
+                'name': 'saber-firework',
+                'location': '../dep/saber-firework/2.0.0/asset',
+                'main': 'main'
+            },
+            {
+                'name': 'saber-lang',
+                'location': '../dep/saber-lang/2.0.1/asset',
+                'main': 'main'
+            },
+            {
+                'name': 'saber-mm',
+                'location': '../dep/saber-mm/1.0.1/asset',
+                'main': 'main'
+            },
+            {
+                'name': 'saber-promise',
+                'location': '../dep/saber-promise/2.0.0/asset',
+                'main': 'promise'
+            },
+            {
+                'name': 'saber-router',
+                'location': '../dep/saber-router/2.0.0/asset',
+                'main': 'main'
+            },
+            {
+                'name': 'saber-run',
+                'location': '../dep/saber-run/1.0.0/asset',
+                'main': 'main'
+            },
+            {
+                'name': 'saber-string',
+                'location': '../dep/saber-string/1.0.0/asset',
+                'main': 'main'
+            },
+            {
+                'name': 'saber-uri',
+                'location': '../dep/saber-uri/1.0.6/asset',
+                'main': 'main'
+            },
+            {
+                'name': 'saber-viewport',
+                'location': '../dep/saber-viewport/1.1.0/asset',
+                'main': 'main'
+            },
+            {
+                'name': 'saber-widget',
+                'location': '../dep/saber-widget/1.0.0/asset',
+                'main': 'main'
+            },
+            {
+                'name': 'saber-storage',
+                'location': '../dep/saber-storage/2.0.0/asset',
+                'main': 'main'
+            },
+            {
+                'name': 'vue',
+                'location': '../dep/vue/1.0.21/dist',
+                'main': 'vue'
+            },
+            {
+                'name': 'vue-router',
+                'location': '../dep/vue-router/0.7.13/dist',
+                'main': 'vue-router'
+            },
+            {
+                'name': 'vux',
+                'location': '../dep/vux/0.0.15/components',
+                'main': ''
+            },
+            {
+                'name': 'vue-resource',
+                'location': '../dep/vue-resource/0.7.0/dist',
+                'main': 'vue-resource'
+            }
+        ]
+    });
+    </script>
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "//hm.baidu.com/hm.js?fba554c5a3281128a3701d41055332c1";
+          var s = document.getElementsByTagName("script")[0];
+          s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</head>
+
+<body>
+    
+    <div id="viewport" class="viewport">
+        <gk-question-list :imgs="banner" :tabs="tongji" :questions="tieList" :school-id="schoolId" :current-role="currentRole">
+        </gk-question-list>
+    </div>
+
+    <div id="downloadView">
+        <gk-download :from="pageName"></gk-download>
+    </div>
+    <script>
+    (function(){
+        var body = document.body;
+        body.style.pointerEvents = 'none';
+        setTimeout(function() {
+            body.style.pointerEvents = 'auto';
+        }, 320);
+    }());
+    // å¨å±éç½®
+    var gkdy = {
+        domain: '/saiya/gaokao',
+        mock: '/saiya/gaokao'
+    };
+    </script>
+    
+<script>
+    require(['questionList/app'], function (app) {
+        app.init({
+            tongji: {"jinghua_count":67,"answered_count":566,"tie_count":6,"school_name":"哈尔滨工业大学"},
+            banner: [{"url":"","img":"http:\/\/h.hiphotos.baidu.com\/xiaodu\/pic\/item\/91529822720e0cf3c0715acf0246f21fbe09aa7b.jpg"},{"url":"","img":"http:\/\/g.hiphotos.baidu.com\/xiaodu\/pic\/item\/9a504fc2d5628535c3b8be4b98ef76c6a7ef637b.jpg "},{"url":"","img":"http:\/\/g.hiphotos.baidu.com\/xiaodu\/pic\/item\/6a600c338744ebf84c8bbc14d1f9d72a6059a727.jpg"}],
+            currentRole: "user",
+            tieList: [{"zhutie":{"id":13161,"tie_id":"7356b5a47528cf3d447e557493d87956","content":"哈尔滨工业大学自主招生可以用全国中学生基础学科创新能力竞赛的证书吗","user_id":"4693694","uname":"ydufcios","urole":"user","time":1468731379,"uni_id":"8","tongwen_count":"0","huifu_count":"1","is_jinghua":0,"is_answered":1,"sort_value":0,"mask":0,"update_time":1468731379,"reserved":""},"huitie":[{"id":10326,"huitie_id":"22974fc9f23a0ffd5116e09fd5ceb9fd","content":" ","user_id":"7570332","uname":"招生办老师","urole":"teacher","time":1472862621,"tie_id":"13161","zan_count":"0","pinglun_count":"0","mask":0,"update_time":1472862621,"reserved":""}]},{"zhutie":{"id":13160,"tie_id":"09ebb98b36a437f0a11255db0dded59a","content":"哈尔滨工业大学自主招生可以用全国中学生基础学科创新能力竞赛的证书吗","user_id":"4693694","uname":"ydufcios","urole":"user","time":1468731378,"uni_id":"8","tongwen_count":"0","huifu_count":"1","is_jinghua":0,"is_answered":1,"sort_value":0,"mask":0,"update_time":1468731378,"reserved":""},"huitie":[{"id":10327,"huitie_id":"3d63982cff85d8eafaa6a67d3f7575cb","content":" ","user_id":"7570332","uname":"招生办老师","urole":"teacher","time":1472862625,"tie_id":"13160","zan_count":"0","pinglun_count":"0","mask":0,"update_time":1472862625,"reserved":""}]},{"zhutie":{"id":13108,"tie_id":"a1074215d87e6566e062208638925f27","content":"
+
+
+
+老师好，我是山东理科考生，分数是463分，请问能报哈工大吗？谢谢","user_id":"15275453","uname":"152*****449","urole":"user","time":1468563460,"uni_id":"8","tongwen_count":"0","huifu_count":"1","is_jinghua":0,"is_answered":1,"sort_value":0,"mask":0,"update_time":1468563460,"reserved":""},"huitie":[{"id":10324,"huitie_id":"036cce6079e37333de199f73d07db3d7","content":" ","user_id":"7570332","uname":"招生办老师","urole":"teacher","time":1472862582,"tie_id":"13108","zan_count":"0","pinglun_count":"0","mask":0,"update_time":1472862582,"reserved":""}]},{"zhutie":{"id":12880,"tie_id":"4a09997e629daecd596990f2e617235b","content":"今年本部或威海在河北省总的计划招生数是多少。","user_id":"4693694","uname":"ydufcios","urole":"user","time":1468185820,"uni_id":"8","tongwen_count":"0","huifu_count":"1","is_jinghua":0,"is_answered":1,"sort_value":0,"mask":0,"update_time":1468185820,"reserved":""},"huitie":[{"id":10325,"huitie_id":"09299da6fcda8ad59dabe070dc05e9db","content":"http:\/\/zsb.hit.edu.cn\/studentnews\/user\/newplan.asp","user_id":"7570332","uname":"招生办老师","urole":"teacher","time":1472862609,"tie_id":"12880","zan_count":"0","pinglun_count":"0","mask":0,"update_time":1472862609,"reserved":""}]},{"zhutie":{"id":12817,"tie_id":"c38a8ba29216458e39d2455f0cc65ad3","content":"老师您好，我是河北理科595分利用国家专项计划报考威海校区有多大把握？谢谢","user_id":"11650609","uname":"157*****658","urole":"user","time":1468115101,"uni_id":"8","tongwen_count":"2","huifu_count":"1","is_jinghua":0,"is_answered":1,"sort_value":1,"mask":0,"update_time":1468115101,"reserved":""},"huitie":[{"id":10266,"huitie_id":"437ff66f5f00a64c7a58fc939c63ff3f","content":"招生办老师正在处理中","user_id":"2258280","uname":"度秘","urole":"dumi","time":1468115744,"tie_id":"12817","zan_count":"0","pinglun_count":"0","mask":0,"update_time":1468115744,"reserved":""}]},{"zhutie":{"id":12732,"tie_id":"93127d13f4a4bffcf4c689ffe30d37ad","content":"请问老师，今年贵校在安徽理科分数线是多少？","user_id":"14625580","uname":"我是大大的神","urole":"user","time":1468050037,"uni_id":"8","tongwen_count":"0","huifu_count":"1","is_jinghua":0,"is_answered":1,"sort_value":0,"mask":0,"update_time":1468050037,"reserved":""},"huitie":[{"id":10226,"huitie_id":"400539cbce4dcb57d2272f391795d2f0","content":"我校2016的录取分数线还没有出，您可以参考一下2015在安徽的录取分数线，详情请查看：http:\/\/zsb.hit.edu.cn\/studentnews\/user\/score.asp?kprovince=安徽","user_id":"2252411","uname":"度秘","urole":"dumi","time":1468051359,"tie_id":"12732","zan_count":"0","pinglun_count":"0","mask":0,"update_time":1468051359,"reserved":""}]},{"zhutie":{"id":12705,"tie_id":"2c73cc026b6c948914e766f326e9b641","content":"请问老师，我家孩子报考了你们学校，什么时候能查询结果","user_id":"14620155","uname":"135*****782","urole":"user","time":1468046754,"uni_id":"8","tongwen_count":"0","huifu_count":"1","is_jinghua":0,"is_answered":1,"sort_value":0,"mask":0,"update_time":1468046754,"reserved":""},"huitie":[{"id":10211,"huitie_id":"b8bfa48f22032d6644f9b85d07566a48","content":"您可以关注我校招生办网址，详情请查看：http:\/\/zsb.hit.edu.cn\/","user_id":"2252411","uname":"度秘","urole":"dumi","time":1468046945,"tie_id":"12705","zan_count":"0","pinglun_count":"0","mask":0,"update_time":1468046945,"reserved":""}]},{"zhutie":{"id":12535,"tie_id":"f3f55326e4f35cfa69cd367669810c78","content":"英才班动态进出机制","user_id":"7570332","uname":"招生办老师","urole":"teacher","time":1467850950,"uni_id":"8","tongwen_count":"2","huifu_count":"1","is_jinghua":1,"is_answered":1,"sort_value":0,"mask":0,"update_time":1467850950,"reserved":""},"huitie":[{"id":10082,"huitie_id":"bfe1332d2c0e4d8bc3b8fd21d8154b78","content":"关于遴选2015级相关专业部分优秀学生加入英才学院的通知
+相关院系：
+从2015年开始，学校决定通过“英才学院”模式，覆盖全校优势理工科方向，选拔部分优秀学生实施精英教育，探索与世界接轨的拔尖创新人才培养体系，致力于培养面向国家重大战略需求、面向国际学术前沿，“厚基础、强实践、重能力、求创新”的未来学术带头人和工程领军人。
+为了加强英才学院与专业院系的协同育人机制建设，为了激发英才学院学生的学习动力，为了更好地利用学校拔尖创新人才培养基地这个平台，开放优质教育资源，让更多的学生从中受益，英才学院实行动态进出的管理模式，现开展面向2015级学生遴选相关专业的部分优秀学生加入英才学院的工作，具体流程如下：
+一、遴选条件
+1.热爱祖国，品德良好，遵纪守法。
+2.基础扎实、思维活跃，对完成专业课程学有余力，愿意接受数理基础强化学习和综合能力拓展实践，有志于从事科学研究工作的2015级相关理工科专业学生。
+3.大一阶段平均学分绩排名专业前5%，对确有特殊专长的可延到前10%，且无不及格课程。
+二、遴选原则和规模
+1.自愿申请，择优选拔，宁缺毋滥。
+2.2016年度选拔不超过50名优秀学生进入英才学院学习。
+三、报名与考核
+1.学生本人提交申请，填写申请表，附相关成绩单与能力证明;并就个人发展目标、学习兴趣、能力素质等方面进行陈述。相关材料提交至所在专业学院。
+2.由所在专业院系组织面试考核，并填写推荐汇总表。
+3.主要考核创新能力、综合素质、学术活跃度、学术探究能力、国际交流能力、科研能力、精神面貌、学习状况等。
+4.根据学生学业成绩、面试成绩等综合表现以及各专业学院允许接收名额，确定进入英才学院学生名单并进行公示。
+四、待遇和要求
+1.经遴选后加入的学生享受英才学院学生同等待遇与要求。
+2.如果大一期间没有进行过转专业，大二结束时无不及格课程，可自由调整专业一次，并按照学校相关规定办理手续。
+3.保持英才学院资格需要达到如下标准：
+（1）考试（核）不及（合）格课程不多于1门次；
+（2）大三结束前通过英语六级考试；
+（3）大三结束前创新学分累计达到5.0学分；
+（4）本科期间至少参加1项科技创新立项并通过结题验收，或向本科生学术论坛投稿并被收录1次；
+（5）每半学年进行社会公益服务的时间不少于10小时。
+五、退出机制
+培养过","user_id":"7570332","uname":"招生办老师","urole":"teacher","time":1467850990,"tie_id":"12535","zan_count":"0","pinglun_count":"1","mask":0,"update_time":1467850990,"reserved":""}]},{"zhutie":{"id":12523,"tie_id":"1e2dab9421e9895928beaa0a29a59571","content":"你好，河北理科669分，你们学校可以吗","user_id":"12001585","uname":"小兔8828","urole":"user","time":1467809622,"uni_id":"8","tongwen_count":"0","huifu_count":"1","is_jinghua":0,"is_answered":1,"sort_value":0,"mask":0,"update_time":1467809622,"reserved":""},"huitie":[{"id":10079,"huitie_id":"c4e8e208ec534b9a2508db7aa849bd7b","content":"您好，您可以参考一下我校往年各省各专业录取分数线，详情请见：http:\/\/zsb.hit.edu.cn\/studentnews\/user\/score.asp","user_id":"457202","uname":"度秘","urole":"dumi","time":1467809818,"tie_id":"12523","zan_count":"0","pinglun_count":"0","mask":0,"update_time":1467809818,"reserved":""}]},{"zhutie":{"id":12499,"tie_id":"9c5e5ff4e4f65753a4fe3d06ad71b6a6","content":"请问北京理科638分，有希望上哈工大吗？","user_id":"11900154","uname":"numenore","urole":"user","time":1467789236,"uni_id":"8","tongwen_count":"0","huifu_count":"1","is_jinghua":0,"is_answered":1,"sort_value":0,"mask":0,"update_time":1467789236,"reserved":""},"huitie":[{"id":10067,"huitie_id":"005778ed2d7d441b99b455abe1ca864b","content":"您好，您可以参考一下我校2015年在北京各专业录取分数线，详情请见：http:\/\/zsb.hit.edu.cn\/studentnews\/user\/score.asp","user_id":"457202","uname":"度秘","urole":"dumi","time":1467798908,"tie_id":"12499","zan_count":"0","pinglun_count":"0","mask":0,"update_time":1467798908,"reserved":""}]}],
+            schoolId: 8
+        });
+    });
+</script>
+
+    <script>
+    require(['download/app'], function (app) {
+        var param = {
+            pageName: 'school'
+        };
+        app.init(param);
+    });
+    </script>
+</body>
+</html>
+
+<!--06460535840359765514060616-->
+<script> var _trace_page_logid = 0646053584; </script>

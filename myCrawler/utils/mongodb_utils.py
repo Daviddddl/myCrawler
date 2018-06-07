@@ -8,8 +8,10 @@ post_info = tdb.menu
 
 print(MONGODB_HOST)
 
+
 def insert_data(data):
     post_info.insert(data)
+
 
 def remove_data(data):
     post_info.remove(data)

@@ -191,7 +191,7 @@ class diseaseSpider(CrawlSpider):
         # 'http://www.diseasesdatabase.com/item_choice.asp?strUserInput=Other digestive diseases&bytSearchType=0',
         # 'http://www.diseasesdatabase.com/item_choice.asp?strUserInput=Sudden infant death syndrome&bytSearchType=0',
         # 'http://www.diseasesdatabase.com/item_choice.asp?strUserInput=None&bytSearchType=0',
-        'http://www.diseasesdatabase.com/item_choice.asp?strUserInput=Maternal deaths aggravated by HIV/AIDS&bytSearchType=0',
+        # 'http://www.diseasesdatabase.com/item_choice.asp?strUserInput=Maternal deaths aggravated by HIV/AIDS&bytSearchType=0',
         # 'http://www.diseasesdatabase.com/item_choice.asp?strUserInput=Ebola&bytSearchType=0',
         # 'http://www.diseasesdatabase.com/item_choice.asp?strUserInput=Zika virus&bytSearchType=0',
         # 'http://www.diseasesdatabase.com/item_choice.asp?strUserInput=Guinea worm disease&bytSearchType=0'
